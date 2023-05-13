@@ -12,6 +12,16 @@ function Home(){
     const [IsFirstTime, setFirstTime] = useState(false);
 
     const toastText = "Thank you so much for visiting my website for the first time! I hope you enjoy it!";
+    const toastProps = {
+        position: "top-right",
+        autoClose: false,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark"
+    }
 
     useEffect(() => {
         const cacheVariable = '@First';
@@ -20,16 +30,7 @@ function Home(){
         if (!hasVisited) {
             localStorage.setItem(cacheVariable, true);
             setFirstTime(true);
-            toast.info(toastText, {
-                position: "top-right",
-                autoClose: false,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark"
-            });
+            toast.info(toastText, toastProps);
         }
         
       }, []);
