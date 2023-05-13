@@ -3,14 +3,14 @@ import HalfLeft from '../components/HalfLeft';
 import HalfRight from "../components/HalfRight";
 import { useEffect, useState } from "react";
 
-import { toast, toastProperties } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 function Home(){
 
     const [IsFirstTime, setFirstTime] = useState(false);
-    
+
     const toastText = "Thank you so much for visiting my website for the first time! I hope you enjoy it!";
 
     useEffect(() => {
