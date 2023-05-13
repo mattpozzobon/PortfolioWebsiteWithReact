@@ -1,6 +1,7 @@
 import { Tooltip, IconButton} from '@mui/material';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
+import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import { Link } from "react-router-dom";
 
 export default function HalfRight() {
@@ -31,7 +32,16 @@ export default function HalfRight() {
                         <PictureAsPdfIcon sx={{ fontSize: 60}} />
                     </IconButton>
                 </Link>
-            </Tooltip>	
+            </Tooltip>
+            </li>
+            <li>
+            <Tooltip title="Certifications" placement="left" arrow componentsProps={black}> 
+                <Link to="/certificates">
+                    <IconButton  sx={{color: "black", '&:hover': {backgroundColor: "#B19256"}}} >
+                        <WorkspacePremiumIcon sx={{ fontSize: 60}} />
+                    </IconButton>
+                </Link>
+            </Tooltip>		
             </li>
         </ul> 
 
