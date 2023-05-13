@@ -21,7 +21,7 @@ function Home(){
             localStorage.setItem(cacheVariable, true);
             setFirstTime(true);
             toast.info(toastText, toastObj);
-        }});
+        }}, []);
     
     
     if (IsFirstTime){
