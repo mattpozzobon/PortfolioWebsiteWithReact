@@ -33,7 +33,7 @@ function Home(){
             toast.info(toastText, toastProps);
         }
         
-      }, []);
+      }, [toastProps]);
     
     
     if (IsFirstTime){
