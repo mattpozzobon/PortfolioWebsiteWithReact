@@ -21,8 +21,6 @@ export default function SocialLinks() {
     const openEmail = () => {
         window.open('mailto:matheuscpozzobon@gmail.com')
     }
-    
-    
 
   return (
     <div className="wrapper">
@@ -30,25 +28,25 @@ export default function SocialLinks() {
         <li>			
             
             <Tooltip title="Youtube" placement="top" arrow>
-                <IconButton onClick={openYoutube} sx={{color: "white"}}>
+                <IconButton onClick={openYoutube} sx={{color: "white", '&:hover': {backgroundColor: "#353536"}}}>
                     <YouTubeIcon sx={{ fontSize: 40 }}/>
                 </IconButton>
             </Tooltip>	
 
             <Tooltip title="Linkedin" placement="top" arrow>
-                <IconButton onClick={openLinkedin} sx={{color: "white"}}>
+                <IconButton onClick={openLinkedin} sx={{color: "white", '&:hover': {backgroundColor: "#353536"}}}>
                     <LinkedInIcon sx={{ fontSize: 40 }} />
                 </IconButton>
             </Tooltip>	
 
             <Tooltip title="GitHub" placement="top" arrow>
-                <IconButton onClick={openGithub} sx={{color: "white"}}>
+                <IconButton onClick={openGithub} sx={{color: "white", '&:hover': {backgroundColor: "#353536"}}}>
                     <GitHubIcon sx={{ fontSize: 40 }} />
                 </IconButton>
             </Tooltip>
 
             <Tooltip title="Email" placement="top" arrow>
-                <IconButton  onClick={openEmail} sx={{color: "white"}}>
+                <IconButton  onClick={openEmail} sx={{color: "white", '&:hover': {backgroundColor: "#353536"}}}>
                     <EmailIcon sx={{ fontSize: 40 }} />
                 </IconButton>
             </Tooltip>	 	   

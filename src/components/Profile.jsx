@@ -1,4 +1,6 @@
+import { Icon, Tooltip } from '@mui/material';
 import profilePic from '../images/profilepic.png';
+import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 
 export default function Profile() {
   return (
@@ -10,7 +12,20 @@ export default function Profile() {
       </div>
       <hr/>
       <hr/>
-      <h3 className="profile_profession">Computer Science Graduate</h3>
+      
+      
+      <div className='work-title'>
+        <div  className="profile_profession">Associate - Graduate Programme</div >
+        
+        <div className="profile_company">
+          <Tooltip title="Place of work" placement="left">
+            <BusinessCenterIcon>
+            </BusinessCenterIcon>
+            
+          </Tooltip>
+          <div>Dunnhumby</div >
+        </div>
+      </div>
     </div>
   )
 }

@@ -1,5 +1,4 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
 	overflow: hidden; /* Hide scrollbars */
@@ -81,14 +80,14 @@ h1 {
 }
 
 .profile_text h1 {
-	font-size: 2.125rem;
+	font-size: 2.0rem;
 }
 
 .wrapper {
 	justify-content: center;
   	align-items: center;
 	position: relative;
-	bottom: -15%;
+	bottom: -10%;
 	left: 3%;
 	width: 94%;
 	text-align: center;
@@ -108,11 +107,6 @@ hr {
   	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-.profile_profession {
-	padding-top: 10px;
-	line-height: 1.0em;
-}
-
 .second {
 	font-size: 1.55rem;
 	line-height: 1.0em;
@@ -129,4 +123,15 @@ hr {
 ul {
 	
 	margin: 20%;
+}
+.work-title {
+	padding: 5px;
+	margin: 10px;
+}
+
+.profile_company{
+	display: flex;
+  	align-items: center;
+	text-align: center;
+	justify-content: center;
 }
