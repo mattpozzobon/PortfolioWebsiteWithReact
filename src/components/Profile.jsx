@@ -1,4 +1,3 @@
-import { Icon, Tooltip } from '@mui/material';
 import profilePic from '../images/profilepic.png';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 
