@@ -12,7 +12,7 @@ function Home(){
     const [IsFirstTime, setFirstTime] = useState(false);
 
     const toastText = "Thank you so much for visiting my website for the first time! I hope you enjoy it!";
-    const toastProps = {
+    var toastProps = {
         position: "top-right",
         autoClose: false,
         hideProgressBar: false,
