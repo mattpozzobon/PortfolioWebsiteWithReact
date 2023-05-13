@@ -8,32 +8,20 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 function Home(){
-
     const [IsFirstTime, setFirstTime] = useState(false);
-
-    const toastText = "Thank you so much for visiting my website for the first time! I hope you enjoy it!";
-    var toastProps = {
-        position: "top-right",
-        autoClose: false,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark"
-    }
-
+    
     useEffect(() => {
         const cacheVariable = '@First';
         const hasVisited = localStorage.getItem(cacheVariable);
-        
+
+        const toastText = "Thank you so much for visiting my website for the first time! I hope you enjoy it!";
+        const toastObj = {position: "top-right", autoClose: false,hideProgressBar: false, closeOnClick: true,pauseOnHover: true,draggable: true,progress: undefined,theme: "dark"}
+
         if (!hasVisited) {
             localStorage.setItem(cacheVariable, true);
             setFirstTime(true);
-            toast.info(toastText, toastProps);
-        }
-        
-      }, [toastProps]);
+            toast.info(toastText, toastObj);
+        }});
     
     
     if (IsFirstTime){
