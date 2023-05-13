@@ -3,7 +3,7 @@ import HalfLeft from '../components/HalfLeft';
 import HalfRight from "../components/HalfRight";
 import { useEffect, useState } from "react";
 
-import { toast } from 'react-toastify';
+import { toast, toastProperties } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -11,7 +11,7 @@ function Home(){
 
     const [IsFirstTime, setFirstTime] = useState(false);
 
-    const toastProperties = {
+    const toastProperties = () => { return({
         position: "top-right",
         autoClose: false,
         hideProgressBar: false,
@@ -19,8 +19,8 @@ function Home(){
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "dark",
-        }
+        theme: "dark"
+    })}
 
     const toastText = "Thank you so much for visiting my website for the first time! I hope you enjoy it!";
 
@@ -31,7 +31,7 @@ function Home(){
         if (!hasVisited) {
             localStorage.setItem(cacheVariable, true);
             setFirstTime(true);
-            toast.info(toastText, toastProperties);
+            toast.info(toastText, toastProperties());
         }
         
       }, []);
