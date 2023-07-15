@@ -13,7 +13,6 @@ function Home(){
     useEffect(() => {
         const cacheVariable = '@First';
         const hasVisited = localStorage.getItem(cacheVariable);
-
         const toastText = "Thank you so much for visiting my website for the first time! I hope you enjoy it!";
         const toastObj = {position: "top-right", autoClose: false,hideProgressBar: false, closeOnClick: true,pauseOnHover: true,draggable: true,progress: undefined,theme: "dark"}
 
@@ -21,27 +20,21 @@ function Home(){
             localStorage.setItem(cacheVariable, true);
             setFirstTime(true);
             toast.info(toastText, toastObj);
-        }}, []);
+        }
+    }, []);
     
     
-    if (IsFirstTime){
-        return (
-            <div className='box'> 
-                <HalfLeft/>
-                <motion.div className="container" initial={{ opacity: 0 }} animate={{ opacity: true ? 1 : 0}} transition={{ ease: "easeOut", duration: 4 }}>
-                    <HalfRight/> 
-                </motion.div>
-            </div>
-        )
-    }
-    else{
-        return (
-            <div className='box'> 
-                <HalfLeft/>
-                <HalfRight/>      
-            </div>
-        )
-    }
+    return (
+        <div className='box'>
+            <HalfLeft/>
+            {IsFirstTime && (
+            <motion.div className="container" initial={{ opacity: 0 }} animate={{ opacity: true ? 1 : 0}} transition={{ ease: "easeOut", duration: 4 }}>
+                <HalfRight/>
+            </motion.div>
+            )}
+            {!IsFirstTime && <HalfRight/>}
+        </div>
+    );
 }
 
 export default Home

@@ -124,14 +124,21 @@ ul {
 	
 	margin: 20%;
 }
-.work-title {
-	padding: 5px;
-	margin: 10px;
-}
 
-.profile_company{
+.work-information {
 	display: flex;
-  	align-items: center;
-	text-align: center;
-	justify-content: center;
-}
+	align-items: center;
+  }
+  
+  .icon {
+	margin-right: 10px;
+  }
+  
+  .profile_details {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .profile_company {
+	margin-top: 10px;
+  }

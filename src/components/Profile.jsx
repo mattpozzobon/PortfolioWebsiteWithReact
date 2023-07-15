@@ -14,18 +14,17 @@ export default function Profile() {
       <hr/>
       
       
-      <div className='work-title'>
-        <div  className="profile_profession">Associate - Graduate Programme</div >
-        
-        <div className="profile_company">
-          <Tooltip title="Place of work" placement="left">
-            <BusinessCenterIcon>
-            </BusinessCenterIcon>
-            
-          </Tooltip>
-          <div>Dunnhumby</div >
-        </div>
+          <div className="work-information">
+      <div className="icon">
+        <Tooltip title="Place of work" placement="left">
+          <BusinessCenterIcon></BusinessCenterIcon>
+        </Tooltip>
       </div>
+      <div className="profile_details">
+        <div className="profile_profession">Associate - Graduate Programme</div>
+        <div className="profile_company">Dunnhumby</div>
+      </div>
+    </div>
     </div>
   )
 }
