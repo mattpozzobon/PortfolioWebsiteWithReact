@@ -23,10 +23,8 @@ export default function SocialLinks() {
     }
 
   return (
-    <div className="wrapper">
-        
+    <div className="linksList">
         <li>			
-            
             <Tooltip title="Youtube" placement="top" arrow>
                 <IconButton onClick={openYoutube} sx={{color: "white", '&:hover': {backgroundColor: "#353536"}}}>
                     <YouTubeIcon sx={{ fontSize: 40 }}/>

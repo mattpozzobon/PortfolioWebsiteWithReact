@@ -1,9 +1,9 @@
 {
     "name":"Matheus",
     "surname": "Pozzobon",
-    "job-title": "Associate - Graduate Programme",
-    "time": "Full-time",
+    "jobTitle": "Associate - Graduate Programme",
+    "employmentType": "Full-time",
     "company": "Dunnhumby",
-    "start-date": "Sep 2022",
+    "startDate": "Sep 2022",
     "location": "Manchester, England, United Kingdom"
 }

@@ -1,40 +1,26 @@
+import React, { useContext} from 'react';
 import { motion } from "framer-motion";
 import HalfLeft from '../components/HalfLeft';
 import HalfRight from "../components/HalfRight";
-import { useEffect, useState } from "react";
-
-import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { DataContext } from '../provider/DataProvider';
 
 
-function Home(){
-    const [IsFirstTime, setFirstTime] = useState(false);
-    
-    useEffect(() => {
-        const cacheVariable = '@First';
-        const hasVisited = localStorage.getItem(cacheVariable);
-        const toastText = "Thank you so much for visiting my website for the first time! I hope you enjoy it!";
-        const toastObj = {position: "top-right", autoClose: false,hideProgressBar: false, closeOnClick: true,pauseOnHover: true,draggable: true,progress: undefined,theme: "dark"}
+export default function Home(){
+    const data = useContext(DataContext);
+    const {isFirstTime, isLoading} = data
 
-        if (!hasVisited) {
-            localStorage.setItem(cacheVariable, true);
-            setFirstTime(true);
-            toast.info(toastText, toastObj);
-        }
-    }, []);
-    
-    
-    return (
-        <div className='box'>
-            <HalfLeft/>
-            {IsFirstTime && (
-            <motion.div className="container" initial={{ opacity: 0 }} animate={{ opacity: true ? 1 : 0}} transition={{ ease: "easeOut", duration: 4 }}>
-                <HalfRight/>
-            </motion.div>
-            )}
-            {!IsFirstTime && <HalfRight/>}
-        </div>
-    );
+    if (!isLoading){
+        return (
+            <div className='box'>
+                <HalfLeft/>
+                {isFirstTime && (
+                <motion.div className="container" initial={{ opacity: 0 }} animate={{ opacity: true ? 1 : 0}} transition={{ ease: "easeOut", duration: 4 }}>
+                    <HalfRight/>
+                </motion.div>
+                )}
+                {!isFirstTime && <HalfRight/>}
+            </div>
+        );
+    }
 }
-
-export default Home

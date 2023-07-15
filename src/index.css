@@ -83,16 +83,8 @@ h1 {
 	font-size: 2.0rem;
 }
 
-.wrapper {
-	justify-content: center;
-  	align-items: center;
-	position: relative;
-	bottom: -10%;
-	left: 3%;
-	width: 94%;
-	text-align: center;
-
-	border-radius: 20px 20px 20px 20px;
+.linksList {
+	margin-top: 0px;
 }
 
 li {
@@ -121,24 +113,40 @@ hr {
 }
 
 ul {
-	
 	margin: 20%;
 }
 
+.icon-title {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
 .work-information {
-	display: flex;
-	align-items: center;
-  }
+    display: flex;
+    justify-content: center;
+}
   
-  .icon {
-	margin-right: 10px;
-  }
+.profile_details {
+    font-size: 20px;
+    text-align: center;
+}
   
-  .profile_details {
-	display: flex;
-	flex-direction: column;
-  }
-  
-  .profile_company {
-	margin-top: 10px;
-  }
+.content {
+	padding-top: 5px;
+    display: inline-block;
+    text-align: left;
+}
+
+.icon-detail {
+    display: flex;
+    align-items: center;
+}
+
+.other_details {
+    font-size: 15px;
+    padding-top: 10px;
+}
