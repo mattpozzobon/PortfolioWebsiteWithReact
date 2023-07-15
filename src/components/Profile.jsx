@@ -1,4 +1,3 @@
-import { Tooltip } from '@mui/material';
 import profilePic from '../images/profilepic.png';
 import React, { useContext} from 'react';
 import { DataContext } from '../provider/DataProvider';
@@ -21,13 +20,13 @@ export default function Profile() {
     let mon = '';
     let year = '';
 
-    if (diffInYears == 1) {
+    if (diffInYears === 1) {
       mon = `${diffInYears} yr`;
     } else if (diffInYears >= 2) {
       mon = `${diffInYears} yrs`;
     }
 
-    if (diffInMonths == 1) {
+    if (diffInMonths === 1) {
       mon = `${diffInMonths} mon`;
     } else if (diffInMonths >= 2) {
       mon = `${diffInMonths} mons`;
